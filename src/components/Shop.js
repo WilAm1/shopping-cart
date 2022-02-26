@@ -7,12 +7,12 @@ export default function Shop({ items, handleClick }) {
       <h2> Shop</h2>
       <ul>
         {items.map((item) => {
-          const { id, title, price } = item;
+          const { id, title, price, image } = item;
           return (
             <li key={id}>
               {" "}
               <Link to={`${id}`}>{title}</Link>
-              <button onClick={() => handleClick({ id, title, price })}>
+              <button onClick={() => handleClick({ id, title, price, image })}>
                 Add to Cart
               </button>
             </li>

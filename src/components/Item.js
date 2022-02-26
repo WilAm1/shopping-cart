@@ -44,6 +44,7 @@ export default function Item({ handleClick }) {
             id: detail.id,
             title: detail.title,
             price: detail.price,
+            image: detail.image,
           })
         }
       >
