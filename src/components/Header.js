@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Header() {
+export default function Header({ cartSize }) {
   return (
     <header>
       <h1>My Logo</h1>
@@ -15,7 +15,7 @@ export default function Header() {
           </li>
         </ul>
       </nav>
-      <Link to="cart">Cart</Link>
+      <Link to="cart">Cart {cartSize}</Link>
     </header>
   );
 }

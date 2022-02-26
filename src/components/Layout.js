@@ -2,10 +2,10 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
 
-export default function Layout() {
+export default function Layout({ cartSize }) {
   return (
     <div>
-      <Header></Header>
+      <Header cartSize={cartSize}></Header>
       <main>
         <Outlet />
       </main>
