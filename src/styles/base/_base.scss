@@ -1,0 +1,16 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  //   border: 1px rgba(226, 8, 8, 0.37) solid;
+}
+
+body {
+  box-sizing: border-box;
+}
+img {
+  display: block;
+  width: 100%;
+}

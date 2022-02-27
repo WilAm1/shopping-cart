@@ -1,0 +1,19 @@
+@use "../abstract" as *;
+@use "../components" as *;
+
+header {
+  background-color: $white-bg;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+}
+
+.header-links {
+  display: flex;
+  gap: 3rem;
+
+  & .nav-link-wrapper {
+    display: flex;
+    gap: 1.5rem;
+  }
+}

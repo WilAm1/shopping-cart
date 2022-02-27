@@ -1,0 +1,22 @@
+@use "../abstract" as *;
+
+.btn {
+  display: inline-block;
+  padding: 1rem 1.2rem;
+
+  &-action {
+    border-radius: 100px;
+    transition: all 0.3s ease-in;
+    background-color: aquamarine;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+    &:active {
+      transform: translateY(10px);
+    }
+  }
+  &.shop-card-btn {
+    background-color: bisque;
+  }
+}

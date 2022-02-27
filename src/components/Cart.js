@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import CartItem from "./CartItem";
 
 export default function Cart({ cart, handleChange }) {
@@ -10,12 +9,10 @@ export default function Cart({ cart, handleChange }) {
   };
 
   return (
-    <div>
+    <section className="cart-section cart">
       <h3>My Cart</h3>
       <div className="cart-wrapper">
-        add some map function to display added to cart items. add some number to
-        adjust item quantity.
-        <ul>
+        <ul className="cart-list-wrapper">
           {Object.keys(cart).map((item) => {
             return (
               <CartItem
@@ -28,6 +25,6 @@ export default function Cart({ cart, handleChange }) {
         </ul>
         <p>Total: {getOrderTotal()}</p>
       </div>
-    </div>
+    </section>
   );
 }

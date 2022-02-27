@@ -1,0 +1,33 @@
+@use "../abstract" as *;
+@use "../components" as *;
+
+.product-section {
+  padding: 3rem;
+
+  .product-overview {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    padding-bottom: 30vh;
+    padding: 5%;
+
+    & .img-wrapper {
+      height: 20rem;
+
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
+  .product {
+    width: 40%;
+    &-title {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    &-price {
+      font-size: 2rem;
+    }
+  }
+}

@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
-    <div>
-      <h1>Hello Home</h1>
-      <p>Display some hero image and accent button </p>
-      <Link to="shop">Shop Now</Link>
-    </div>
+    <section className="home home-section">
+      <h2>Get your wallets ready</h2>
+      <p>lorem ipsum something something </p>
+      <Link to="shop" className="btn btn-action btn-accent btn-animation">
+        Shop Now
+      </Link>
+    </section>
   );
 }

@@ -27,29 +27,38 @@ export default function Item({ handleClick }) {
   return loading ? (
     <div>Loading</div>
   ) : (
-    <div>
-      <h3>{detail.title}</h3>
-      <p>{productID}</p>
-      <img src={detail.image} alt={detail.title} />
-      <p>{detail.price}</p>
-      <p>
-        Rate: {detail.rating.rate}
-        Count: {detail.rating.count}
-      </p>
-      <p>{detail.category}</p>
-      <p>{detail.description}</p>
-      <button
-        onClick={() =>
-          handleClick({
-            id: detail.id,
-            title: detail.title,
-            price: detail.price,
-            image: detail.image,
-          })
-        }
-      >
-        Add to Cart
-      </button>
-    </div>
+    <section className="product-section product">
+      <div className="product-overview">
+        <div className="item img-wrapper product-img-wrapper">
+          <img src={detail.image} alt={detail.title} />
+        </div>
+        <div className="product">
+          <h4 className="product-title">{detail.title}</h4>
+          <p className="product-price">$ {detail.price}</p>
+          <div className="rating-wrapper">
+            <p class="product-rate">Rating: ⭐ {detail.rating.rate}/5</p>
+            <p class="product-count">Count: {detail.rating.count}</p>
+          </div>
+          <button
+            className="btn product-btn btn-product"
+            onClick={() =>
+              handleClick({
+                id: detail.id,
+                title: detail.title,
+                price: detail.price,
+                image: detail.image,
+              })
+            }
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+      <div className="product-extended-details">
+        <p className="product-category">Category: {detail.category}</p>
+        <p className="product-description">Description: {detail.description}</p>
+        <p className="product-number">Product Number: {productID}</p>
+      </div>
+    </section>
   );
 }
