@@ -1,3 +1,13 @@
+@use "../abstract" as *;
+@use "../components" as *;
+
+.shop-section {
+  padding: 3rem;
+}
+.user-cart {
+  padding-bottom: 3rem;
+}
+
 .shop-wrapper {
   display: grid;
   padding: 5rem;
@@ -12,8 +22,9 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 0.7rem;
-  border: 1px solid black;
-  box-shadow: 0 10px 10px rgba($color: black, $alpha: 0.3);
+  border: 1px solid $color-dark-blue;
+  box-shadow: 0 10px 10px rgba($color-dark-blue, $alpha: 0.3);
+  background-color: $white-bg;
 
   &-img-wrapper {
     padding: 0.5rem;
@@ -24,6 +35,10 @@
     }
   }
 
+  &-price {
+    color: rgba($color-dark-blue, $alpha: 0.8);
+  }
+
   &-detail-wrapper {
     display: flex;
     flex-direction: column;
@@ -31,10 +46,6 @@
 
     & .link-container {
       flex: 1;
-    }
-
-    button {
-      cursor: pointer;
     }
   }
 }

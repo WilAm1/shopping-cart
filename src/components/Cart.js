@@ -11,7 +11,7 @@ export default function Cart({ cart, handleChange }) {
   return (
     <section className="cart-section cart">
       <h3>My Cart</h3>
-      <div className="cart-wrapper">
+      <div className="user-cart">
         <ul className="cart-list-wrapper">
           {Object.keys(cart).map((item) => {
             return (
@@ -23,7 +23,14 @@ export default function Cart({ cart, handleChange }) {
             );
           })}
         </ul>
-        <p>Total: {getOrderTotal()}</p>
+        <div className="order-checkout">
+          <p className="order-total-price">
+            Total: $ {Math.round(getOrderTotal() * 100) / 100}
+          </p>
+          <button className="checkout-btn btn order-checkout-btn">
+            checkout
+          </button>
+        </div>
       </div>
     </section>
   );

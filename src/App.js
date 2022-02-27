@@ -10,12 +10,7 @@ import Item from "./components/Item";
 import "./styles/main.scss";
 
 function App() {
-  const [api, setApi] = useState([]);
   const [cart, setCart] = useState({});
-
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   const handleAddCart = ({ id, title, price, image }) => {
     const newItem = cart[id]
@@ -40,12 +35,6 @@ function App() {
     }
   };
 
-  const fetchData = async () => {
-    const res = await fetch("https://fakestoreapi.com/products");
-    const data = await res.json();
-    setApi(data);
-  };
-
   const getCartSize = () => {
     return Object.keys(cart).reduce((accum, id) => {
       return accum + cart[id].quantity;
@@ -57,10 +46,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout cartSize={getCartSize()} />}>
           <Route index element={<Home />} />
-          <Route
-            path="shop"
-            element={<Shop items={api} handleClick={handleAddCart} />}
-          />
+          <Route path="shop" element={<Shop handleClick={handleAddCart} />} />
           <Route
             path="/shop/:productID"
             element={<Item handleClick={handleAddCart} />}

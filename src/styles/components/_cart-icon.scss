@@ -1,10 +1,12 @@
+@use "../abstract" as *;
+
 .cart-wrapper {
   position: relative;
 
   a {
     position: relative;
     & .cart--icon {
-      background-color: azure;
+      background-color: $color-dirty-white;
       transform: scale(2);
       border-radius: 100px;
       width: 1.5rem;
@@ -23,7 +25,8 @@
       position: absolute;
       bottom: -0.7rem;
       left: -1.2rem;
-      background-color: aqua;
+      background-color: $color-accent-color;
+      color: $color-dirty-white;
       display: flex;
       justify-content: center;
       align-items: center;

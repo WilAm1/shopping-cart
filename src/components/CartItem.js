@@ -10,6 +10,7 @@ export default function CartItem({ cart, handleChange }) {
     }
     return title;
   };
+
   return (
     <li className="cart-item">
       <div className="cart-item-img--wrapper">
@@ -21,12 +22,22 @@ export default function CartItem({ cart, handleChange }) {
         </div>
         <p className="cart-item-price">Price: $ {price}</p>
 
-        <div class="cart-item-btn-wrapper">
-          <button onClick={() => handleChange({ amount: -1, id })}>-</button>
+        <div className="cart-item-btn-wrapper">
+          <button
+            className="btn cart-change-btn"
+            onClick={() => handleChange({ amount: -1, id })}
+          >
+            -
+          </button>
           <div className="cart-item-quantity item-quantity">
             <p>{quantity}</p>
           </div>
-          <button onClick={() => handleChange({ amount: 1, id })}>+</button>
+          <button
+            className="btn cart-change-btn"
+            onClick={() => handleChange({ amount: 1, id })}
+          >
+            +
+          </button>
         </div>
       </div>
     </li>

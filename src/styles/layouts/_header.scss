@@ -2,7 +2,7 @@
 @use "../components" as *;
 
 header {
-  background-color: $white-bg;
+  background-color: $color-dark-blue;
   display: flex;
   justify-content: space-between;
   padding: 2rem 3rem;
@@ -11,6 +11,7 @@ header {
 .header-links {
   display: flex;
   gap: 3rem;
+  align-items: center;
 
   & .nav-link-wrapper {
     display: flex;

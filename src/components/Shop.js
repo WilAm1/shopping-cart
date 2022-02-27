@@ -1,18 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-export default function Shop({ items, handleClick }) {
+export default function Shop({ handleClick }) {
   const shortenTitle = (title, maxChar) => {
     if (title.length > 50) {
       return title.split("").slice(0, maxChar).join("") + "...";
     }
     return title;
   };
+
+  const [api, setApi] = useState([]);
+  const fetchData = async () => {
+    try {
+      const res = await fetch("https://fakestoreapi.com/products");
+      const data = await res.json();
+      setApi(data);
+    } catch (err) {
+      throw err;
+    }
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <section className="shop-section shop">
       <h3 className="shop-title"> Shop</h3>
       <ul className="shop-wrapper">
-        {items.map((item) => {
+        {api.map((item) => {
           const { id, title, price, image } = item;
           return (
             <li key={id} className="shop-card">
