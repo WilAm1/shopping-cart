@@ -1,6 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import Home from "./components/Home";
 import Layout from "./components/Layout";
 import Shop from "./components/Shop";
@@ -42,7 +42,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Layout cartSize={getCartSize()} />}>
           <Route index element={<Home />} />
