@@ -1,4 +1,20 @@
-# Getting Started with Create React App
+# Shopping Cart
+
+> From the theOdinProject [Curriculum](https://www.theodinproject.com/lessons/memory-card)
+
+Simple React Shopping Cart
+Visit the Live Demo [here](https://WilAm1.github.io/shopping-cart)
+
+## What have I learned:
+
+- frontend routing with `react-router-dom`
+- SASS
+
+## API used:
+
+Thanks to [fakeStoreAPI](https://fakestoreapi.com) for the free API used.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
